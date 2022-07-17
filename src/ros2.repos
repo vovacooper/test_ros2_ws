@@ -8,3 +8,7 @@ repositories:
     type: git
     url: https://github.com/ros2/examples.git
     version: foxy
+  # ros2_blender:
+  #   type: git
+  #   url: git@github.com:lulav/ros2_blender.git
+    # version: foxy
