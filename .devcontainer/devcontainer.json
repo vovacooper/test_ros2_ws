@@ -36,9 +36,6 @@
 		"smilerobotics.urdf",
 		"streetsidesoftware.code-spell-checker",
 		"twxs.cmake",
-		"yzhang.markdown-all-in-one",
-		"mtxr.sqltools",
-		"mtxr.sqltools-driver-sqlite",
-		"mtxr.sqltools-driver-mysql"
+		"yzhang.markdown-all-in-one"
 	]
 }
