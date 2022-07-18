@@ -18,5 +18,7 @@ def generate_launch_description():
     )
     ld.add_action(talker_node)
     ld.add_action(listener_node)
+    
+    # TODO: add record bag
 
     return ld

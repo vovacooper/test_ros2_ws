@@ -70,6 +70,22 @@
         ".vscode-insiders",
         ".devcontainer/devcontainer.json"
     ],
+    // "sqltools.connections": [
+    //     {
+    //         "mysqlOptions": {
+    //             "authProtocol": "default"
+    //         },
+    //         "previewLimit": 50,
+    //         "server": "localhost",
+    //         "port": 3306,
+    //         "askForPassword": true,
+    //         "driver": "MySQL",
+    //         "name": "lulav-sql",
+    //         "username": "root",
+    //         "database": "myDB"
+    //     }
+    // ],
+    "sqltools.useNodeRuntime": true,
     "sqltools.connections": [
         {
             "mysqlOptions": {
@@ -78,18 +94,11 @@
             "previewLimit": 50,
             "server": "localhost",
             "port": 3306,
-            "askForPassword": true,
             "driver": "MySQL",
-            "name": "lulav-sql",
+            "name": "lulav-mysql",
             "username": "root",
+            "password": "112358",
             "database": "myDB"
-        },
-        {
-            "previewLimit": 50,
-            "driver": "SQLite",
-            "name": "bag1",
-            "database": "/Users/vovacooper/dev/Lulav/test_ros2_ws/rosbag2_2022_07_18-06_29_29/rosbag2_2022_07_18-06_29_29_0.db3"
         }
     ],
-    "sqltools.useNodeRuntime": true,
 }
