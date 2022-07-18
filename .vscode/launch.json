@@ -4,6 +4,22 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+    {
+      "name": "talker",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/install/lib/py_pubsub/talker",
+      "cwd": "${workspaceFolder}",      
+      "console": "integratedTerminal",
+    },
+    {
+      "name": "listener",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/install/lib/py_pubsub/listener",
+      "cwd": "${workspaceFolder}",      
+      "console": "integratedTerminal",
+    },
     // Example launch of a python file
     {
       "name": "Python: Current File",
