@@ -27,9 +27,19 @@ class MinimalPublisher(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 
+        self.declare_parameter('my_str')
+        self.declare_parameter('my_int')
+        self.declare_parameter('my_double_array')
+
+        self.param_str = self.get_parameter('my_str')
+        self.param_int = self.get_parameter('my_int')
+        self.param_double_array = self.get_parameter('my_double_array')
+
+        self.get_logger().info(f"str: {str(self.param_str.value)}, int: {str(self.param_int.value)}, double[]: {str(self.param_double_array.value)}")
+    
     def timer_callback(self):
         msg = String()
-        msg.data = 'Hello World: %d' % self.i
+        msg.data = f"Hello World: {self.i}, str: {str(self.param_str.value)}, int: {str(self.param_int.value)}, double[]: {str(self.param_double_array.value)}"        
         self.publisher_.publish(msg)
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1

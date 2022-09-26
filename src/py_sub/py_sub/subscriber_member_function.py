@@ -24,7 +24,7 @@ class MinimalSubscriber(Node):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(
             String,
-            'topic',
+            'talker',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -34,6 +34,8 @@ class MinimalSubscriber(Node):
 
 
 def main(args=None):
+    print("listener main")
+    print(args)
     rclpy.init(args=args)
 
     minimal_subscriber = MinimalSubscriber()
