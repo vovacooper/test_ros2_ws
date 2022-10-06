@@ -16,5 +16,22 @@ colcon info py_sub
 
 
 
+
+# Build
+colcon build
+
+# Source
+source install/setup.sh 
+
 # Launch
 ros2 launch launch/demo.launch.py 
+
+
+
+# HELP:
+ros2 topic echo /talker
+ros2 topic pub /talker std_msgs/String "data: HeHlllo ROS Developers"
+
+# Check comunication
+ros2 multicast send
+ros2 multicast receive 

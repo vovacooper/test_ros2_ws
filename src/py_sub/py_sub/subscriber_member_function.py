@@ -19,7 +19,6 @@ from std_msgs.msg import String
 
 
 class MinimalSubscriber(Node):
-
     def __init__(self):
         super().__init__('minimal_subscriber')
         self.subscription = self.create_subscription(
@@ -27,14 +26,15 @@ class MinimalSubscriber(Node):
             'talker',
             self.listener_callback,
             10)
-        self.subscription  # prevent unused variable warning
+        # self.subscription  # prevent unused variable warning
+        self.get_logger().info('Listening on [/talker] topic')
 
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg.data)
 
 
 def main(args=None):
-    print("listener main")
+    print(" + listener main")
     print(args)
     rclpy.init(args=args)
 
@@ -47,6 +47,7 @@ def main(args=None):
     # when the garbage collector destroys the node object)
     minimal_subscriber.destroy_node()
     rclpy.shutdown()
+    print(" - listener main")
 
 
 if __name__ == '__main__':

@@ -11,7 +11,7 @@ def generate_launch_description():
         executable='talker',
         name='talker',
         remappings=[('topic', '/talker')],
-        # parameters=[{'my_str':'vova talker', 'my_int': 77, 'my_double_array': [4.4, 5.5, 6.6]}]                      
+        parameters=[{'my_str':'vova talker', 'my_int': 77, 'my_double_array': [4.4, 5.5, 6.6]}]                      
     )
     ld.add_action(node_py_pub)
 
@@ -20,7 +20,7 @@ def generate_launch_description():
         # namespace='lulav',
         executable='listener',
         name='listener',        
-        parameters=[{'name_param':'vova listener'}]
+        # parameters=[{'name_param':'vova listener'}]
     )
     ld.add_action(node_py_sub)
     return ld
